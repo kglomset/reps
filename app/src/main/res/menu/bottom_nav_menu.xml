@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/fi_rr_home"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/dumbbell_horizontal"
+        android:title="@string/title_workouts" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/fi_rr_chart_line_up"
+        android:title="@string/title_progress" />
+</menu>
