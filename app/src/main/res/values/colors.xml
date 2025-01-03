@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="background">#233D4D</color>
-    <color name="wenge">#5D576B</color>
+    <color name="jet">#3B3743</color>
     <color name="orange">#FE7F2D</color>
     <color name="yellow">#FCCA46</color>
     <color name="bright_green">#A1C181</color>
     <color name="teal">#619B8A</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="backgroundWhite">#FCFCFC</color>
+    <color name="backgroundWhite">#f7f7f7</color>
     <color name="unselected_nav">#AAA5B6</color>
 </resources>

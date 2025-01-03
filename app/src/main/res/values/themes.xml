@@ -3,7 +3,7 @@
     <style name="Theme.Reps" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/backgroundWhite</item>
-        <item name="colorPrimaryVariant">@color/wenge</item>
+        <item name="colorPrimaryVariant">@color/jet</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Potentially set more colors to the theme -->
         <!-- Secondary brand color. -->

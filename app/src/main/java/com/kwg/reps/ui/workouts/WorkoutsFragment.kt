@@ -1,4 +1,4 @@
-package com.kwg.reps.ui.notifications
+package com.kwg.reps.ui.workouts
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.kwg.reps.databinding.FragmentProgressBinding
+import com.kwg.reps.databinding.FragmentWorkoutsBinding
 
-class ProgressFragment : Fragment() {
+class WorkoutsFragment : Fragment() {
 
-    private var _binding: FragmentProgressBinding? = null
+    private var _binding: FragmentWorkoutsBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +22,14 @@ class ProgressFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+        val workoutsViewModel =
+            ViewModelProvider(this).get(WorkoutsViewModel::class.java)
 
-        _binding = FragmentProgressBinding.inflate(inflater, container, false)
+        _binding = FragmentWorkoutsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textDashboard
+        workoutsViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root
