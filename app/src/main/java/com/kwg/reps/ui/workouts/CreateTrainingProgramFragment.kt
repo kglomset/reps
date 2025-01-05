@@ -16,4 +16,7 @@ class CreateTrainingProgramFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_create_training_plan, container, false)
     }
+
+
+
 }
