@@ -15,11 +15,20 @@
         android:id="@+id/navigation_dashboard"
         android:name="com.kwg.reps.ui.workouts.WorkoutsFragment"
         android:label="@string/title_workouts"
-        tools:layout="@layout/fragment_workouts" />
+        tools:layout="@layout/fragment_workouts" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_trainingPlanSettingsFragment"
+            app:destination="@id/trainingPlanSettingsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.kwg.reps.ui.progress.ProgressFragment"
         android:label="@string/title_progress"
         tools:layout="@layout/fragment_progress" />
+    <fragment
+        android:id="@+id/trainingPlanSettingsFragment"
+        android:name="com.kwg.reps.ui.trainingprogram.TrainingPlanSettingsFragment"
+        android:label="fragment_training_plan_settings"
+        tools:layout="@layout/fragment_training_plan_settings" />
 </navigation>

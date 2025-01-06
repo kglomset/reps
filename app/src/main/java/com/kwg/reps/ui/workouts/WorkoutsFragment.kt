@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.kwg.reps.R
 import com.kwg.reps.databinding.FragmentWorkoutsBinding
 import com.kwg.reps.ui.trainingprogram.TrainingPlanSettingsFragment
@@ -31,31 +32,30 @@ class WorkoutsFragment : Fragment() {
         _binding = FragmentWorkoutsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_workouts, container, false)
-
-        // Find the button and set its click listener
-        val openTrainingPlanButton: Button = view.findViewById(R.id.createProgram)
-        openTrainingPlanButton.setOnClickListener {
+        /*
+        // Set up the button click listener using the binding
+        binding.createProgram.setOnClickListener {
             openTrainingPlanSettingsFragment()
         }
 
-        val textView: TextView = binding.textDashboard
-        workoutsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+         */
+
+        binding.createProgram.setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_workouts_to_trainingPlanSettingsFragment)
         }
-        return root
+
+        // Observe ViewModel for text updates
+        workoutsViewModel.text.observe(viewLifecycleOwner) {
+            binding.textDashboard.text = it
+        }
+        return binding.root
     }
 
     private fun openTrainingPlanSettingsFragment() {
-        val fragment = TrainingPlanSettingsFragment()
-
-        // Replace the current fragment with TrainingPlanSettingsFragment
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainerView, fragment)
-            .addToBackStack(null) // Optional: Enables back navigation
-            .commit()
+            val navController = findNavController()
+            navController.navigate(R.id.action_navigation_dashboard_to_trainingPlanSettingsFragment)
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
