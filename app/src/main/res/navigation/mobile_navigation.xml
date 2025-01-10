@@ -12,17 +12,17 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_workouts"
         android:name="com.kwg.reps.ui.workouts.WorkoutsFragment"
         android:label="@string/title_workouts"
         tools:layout="@layout/fragment_workouts" >
         <action
-            android:id="@+id/action_navigation_dashboard_to_trainingPlanSettingsFragment"
+            android:id="@+id/action_navigation_workouts_to_trainingPlanSettingsFragment"
             app:destination="@id/trainingPlanSettingsFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_progress"
         android:name="com.kwg.reps.ui.progress.ProgressFragment"
         android:label="@string/title_progress"
         tools:layout="@layout/fragment_progress" />

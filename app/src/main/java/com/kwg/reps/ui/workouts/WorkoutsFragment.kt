@@ -32,13 +32,6 @@ class WorkoutsFragment : Fragment() {
         _binding = FragmentWorkoutsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        /*
-        // Set up the button click listener using the binding
-        binding.createProgram.setOnClickListener {
-            openTrainingPlanSettingsFragment()
-        }
-
-         */
 
         binding.createProgram.setOnClickListener {
             findNavController().navigate(R.id.action_navigation_workouts_to_trainingPlanSettingsFragment)
@@ -49,11 +42,6 @@ class WorkoutsFragment : Fragment() {
             binding.textDashboard.text = it
         }
         return binding.root
-    }
-
-    private fun openTrainingPlanSettingsFragment() {
-            val navController = findNavController()
-            navController.navigate(R.id.action_navigation_dashboard_to_trainingPlanSettingsFragment)
     }
 
 
